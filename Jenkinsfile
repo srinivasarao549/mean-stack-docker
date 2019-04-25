@@ -17,5 +17,10 @@ pipeline {
                 echo 'Deploying....'
             }
         }
+         stage('Run') {
+            steps {
+                 sh 'docker-compose up app-e2e'
+            }
+        }
     }
 }
